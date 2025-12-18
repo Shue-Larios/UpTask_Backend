@@ -4,6 +4,8 @@ export const corsConfig: CorsOptions = {
     origin: function (origin, callback) {
         // colocamos como lista blanca la url puesta en env
         const whitelist = [process.env.FRONTEND_URL]
+        console.log(origin, "origen");
+        console.log(whitelist, "whitelist");
         // argv es como leer parametros que agregamos momento de correr el programa con npm run dev:api en package.json
         if (process.argv[2] === '--api') {
             // por que undefined xk thunderClient o postman envian el origen como undefined
