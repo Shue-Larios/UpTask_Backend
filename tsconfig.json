@@ -1,0 +1,29 @@
+//   ESTO LO PUEDO UTILIZAR ASI COMO ESTA COMPLETO EN PROYECTTOS NUEVOS PARA QUE NO DE ERROR AL CORRER EL BACKEND DE INICIO
+{
+    "compilerOptions": {
+        "outDir": "./dist",
+        "rootDir": "./src",
+        "lib": [
+            "esnext"
+        ],
+        // estas tres lineas tambien hay que agregarlas para evitar el error al momento de guardar en la base de datos
+        "target": "ESNext",
+        "moduleResolution": "nodenext",
+        "module": "nodenext",
+        "strict": false,
+        "sourceMap": true,
+        "esModuleInterop": true,
+        "declaration": true,
+        // hay que agregar estas dos lineas para que reconozca los models
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true
+    },
+    // para que inicluya todo lo que tiene esa extencion
+    "include": [
+        "src/**/*.ts"
+    ],
+    // para que excluya todo lo que tiene esa extencion
+    "exclude": [
+        "src/**/*.test.ts"
+    ]
+}
